@@ -6,7 +6,7 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Re-Member — a feminine approach to wellbeing</title>
+<title>In-Sight — a feminine approach to wellbeing</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -16,8 +16,8 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 :root {
-  --cream: #FAF8F4; --warm-white: #FFFDF9; --ink: #1C1915;
-  --ink-soft: #3D3932; --ink-muted: #7A746A; --ink-faint: #B8B2A8;
+  --cream: #FAF8F4; --warm-white: #FFFDF9; --ink: #16120F;
+  --ink-soft: #211C18; --ink-muted: #3A332C; --ink-faint: #6A635C;
   --border: rgba(28,25,21,0.1); --serif: "Cormorant Garamond", Georgia, serif;
   --sans: "Jost", sans-serif; --radius: 14px; --radius-sm: 8px;
   --ease: all 0.22s ease;
@@ -25,7 +25,7 @@ html { scroll-behavior: smooth; }
   --mind-color: #534AB7; --mind-bg: #EEEDFE; --mind-mid: #7F77DD; --mind-text: #3C3489;
   --spirit-color: #993C1D; --spirit-bg: #FAECE7; --spirit-mid: #D85A30; --spirit-text: #712B13;
 }
-body { font-family: var(--sans); background: var(--cream); color: var(--ink); font-weight: 300; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+body { font-family: var(--sans); background: var(--cream); color: var(--ink); font-weight: 300; font-size: 15px; line-height: 1.75; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 .view { display: none; }
 .view.active { display: block; animation: fadeUp 0.3s ease; }
 @keyframes fadeUp { from { opacity:0; transform:translateY(12px); } to { opacity:1; transform:translateY(0); } }
@@ -262,9 +262,10 @@ footer { padding:52px 40px 44px; border-top:0.5px solid var(--border); display:f
 
 <nav id="main-nav">
   <div class="nav-inner">
-    <span class="nav-logo" onclick="goHome()">Re-<em>Member</em></span>
+    <span class="nav-logo" onclick="goHome()">In-<em>Sight</em></span>
     <div class="nav-links">
       <a href="#" class="nav-item" onclick="event.preventDefault();goManifesto()"><span class="nav-item-label">Why &amp; How</span><span class="nav-item-desc">Our philosophy</span></a>
+      <a href="#" class="nav-item" onclick="event.preventDefault();goTracker()"><span class="nav-item-label">Tracker</span><span class="nav-item-desc">Your journey</span></a>
       <a href="#" class="nav-item" onclick="event.preventDefault();goToolbox()"><span class="nav-item-label">Toolbox</span><span class="nav-item-desc">Your saved tools</span></a>
     </div>
   </div>
@@ -277,19 +278,26 @@ footer { padding:52px 40px 44px; border-top:0.5px solid var(--border); display:f
 
     <!-- Header -->
     <div style="text-align:center;position:relative;z-index:2;margin-bottom:44px;max-width:580px">
-      <p style="font-size:11px;letter-spacing:0.42em;text-transform:uppercase;color:var(--ink-faint);font-weight:200;margin-bottom:22px;opacity:0;animation:riseIn 0.8s ease 0.1s forwards">Re-Member</p>
-      <h1 style="font-family:var(--serif);font-size:clamp(2.2rem,5vw,3.8rem);font-weight:300;line-height:1.12;color:var(--ink);margin-bottom:16px;letter-spacing:-0.01em;opacity:0;animation:riseIn 0.9s ease 0.25s forwards">Re-<em style="font-style:italic;color:#993C1D">Member</em></h1>
+      <p style="font-size:11px;letter-spacing:0.42em;text-transform:uppercase;color:var(--ink-faint);font-weight:200;margin-bottom:22px;opacity:0;animation:riseIn 0.8s ease 0.1s forwards">In-Sight</p>
+      <h1 style="font-family:var(--serif);font-size:clamp(2.2rem,5vw,3.8rem);font-weight:300;line-height:1.12;color:var(--ink);margin-bottom:16px;letter-spacing:-0.01em;opacity:0;animation:riseIn 0.9s ease 0.25s forwards">In-<em style="font-style:italic;color:#993C1D">Sight</em></h1>
       <p style="font-family:var(--serif);font-size:1rem;font-style:italic;color:var(--ink-soft);line-height:1.7;margin-bottom:32px;opacity:0;animation:riseIn 0.9s ease 0.4s forwards">An inside-out model of health that centres you as the guide.</p>
 
       <!-- Framing copy -->
       <div style="opacity:0;animation:riseIn 0.8s ease 0.58s forwards;text-align:left;border-left:1.5px solid rgba(153,60,29,0.2);padding-left:20px;margin-bottom:0">
         <p style="font-size:13px;font-weight:300;color:var(--ink-soft);line-height:2;margin-bottom:14px">Modern wellness treats the body as something breaking down, and delivers fragmented solutions to isolated parts. We have been taught to distrust what we feel, dismiss what we sense, and look outside ourselves for answers.</p>
         <p style="font-size:13px;font-weight:300;color:var(--ink-soft);line-height:2;margin-bottom:14px">This is a place to re-member. The body is not a machine. It is a living intelligence — cyclical, relational, always speaking.</p>
-        <p style="font-size:13px;font-weight:300;color:var(--ink-soft);line-height:2">Re-Member is a living framework rooted in somatic wisdom, feminine intelligence, and the ancient knowing of plants, cycles and the natural world. Each doorway below opens a different thread of that conversation — offering understanding, practices, plants and wisdom to guide you back to your whole.</p>
+        <p style="font-size:13px;font-weight:300;color:var(--ink-soft);line-height:2;margin-bottom:16px">In-Sight is a living framework rooted in somatic wisdom, feminine intelligence, and the ancient knowing of plants, cycles and the natural world. Each doorway below opens a different thread of that conversation — offering understanding, practices, plants and wisdom to guide you back to your whole.</p>
+        <div style="text-align:center;margin-top:4px">
+          <div style="display:inline-flex;align-items:center;gap:7px;background:transparent;color:#993C1D;border:1.5px solid #993C1D;border-radius:30px;padding:8px 20px">
+            <svg width="11" height="11" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="5.5" stroke="#993C1D" stroke-width="1.5"/><line x1="8" y1="5" x2="8" y2="11" stroke="#993C1D" stroke-width="1.5" stroke-linecap="round"/><line x1="5" y1="8" x2="11" y2="8" stroke="#993C1D" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <span style="font-size:11px;font-weight:400;letter-spacing:0.06em;font-family:var(--serif);font-style:italic">Select a doorway to guide you back to your whole</span>
+          </div>
+        </div>
       </div>
     </div>
 
     <!-- Pie Wheel -->
+    <div style="margin-bottom:16px"></div>
     <div id="portal-petals-wrap" style="position:relative;z-index:2;width:100%;max-width:700px;margin:0 auto 36px;opacity:0;animation:riseIn 0.9s ease 0.85s forwards">
       <div id="portal-wheel"></div>
     </div>
@@ -312,7 +320,7 @@ footer { padding:52px 40px 44px; border-top:0.5px solid var(--border); display:f
       <div style="display:flex;justify-content:center;margin-bottom:28px">
         <button onclick="goHome()" style="font-family:var(--sans);font-size:10px;font-weight:300;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-faint);background:none;border:0.5px solid var(--border);border-radius:20px;padding:6px 16px;cursor:pointer;display:flex;align-items:center;gap:6px;transition:all 0.2s" onmouseover="this.style.color='var(--ink)'" onmouseout="this.style.color='var(--ink-faint)'"><svg width="12" height="12" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Back to paths</button>
       </div>
-      <p style="font-size:11px;font-weight:400;letter-spacing:0.22em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:24px">Re-Member</p>
+      <p style="font-size:11px;font-weight:400;letter-spacing:0.22em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:24px">In-Sight</p>
       <h1 style="font-family:var(--serif);font-size:clamp(2.6rem,5.5vw,4.2rem);font-weight:300;line-height:1.1;color:var(--ink);margin-bottom:22px;letter-spacing:-0.01em">A feminine approach to <em style="font-style:italic;color:#993C1D">being well</em></h1>
     </div>
   </section>
@@ -320,10 +328,18 @@ footer { padding:52px 40px 44px; border-top:0.5px solid var(--border); display:f
   <!-- NINE ROOTS CIRCLE -->
   <section style="padding:0 0 48px">
     <div class="shell" style="display:flex;flex-direction:column;align-items:center">
-      <p style="font-size:13px;font-weight:300;color:var(--ink-soft);line-height:1.85;text-align:center;max-width:440px;margin:0 auto 10px">The whole of you — body, mind and spirit — is one intelligent, adaptive system, not a collection of separate parts. What you think shapes what you feel. What you feel shapes what the body does. Nine roots, each one tending a layer that has been overlooked. The circle gathers them — because a self that is wholly known, is a self that is genuinely well.</p>
-      <p style="font-size:11px;font-weight:300;color:var(--ink-faint);line-height:1.7;text-align:center;max-width:380px;margin:0 auto 32px;letter-spacing:0.02em">Nine roots across body, mind and spirit. Tap or click any segment of the circle below to begin.</p>
-      <div id="circle-container" style="position:relative;width:100%;max-width:520px"></div>
-      <div style="margin-top:24px;text-align:center"><p style="font-size:13px;font-weight:400;color:var(--ink-soft);margin-bottom:8px;letter-spacing:0.02em">👆 Tap or click any root on the circle to open it</p><p style="font-size:11px;font-weight:300;color:var(--ink-faint);font-style:italic">Each segment is a doorway — begin with whatever draws you</p></div>
+      <p style="font-size:13px;font-weight:300;color:var(--ink-soft);line-height:1.85;text-align:center;max-width:440px;margin:0 auto 24px">The whole of you — body, mind and spirit — is one intelligent, adaptive system, not a collection of separate parts. What you think shapes what you feel. What you feel shapes what the body does. Nine roots, each one tending a layer that has been overlooked. The circle gathers them — because a self that is wholly known, is a self that is genuinely well.</p>
+
+      <!-- Pill above circle -->
+      <div style="text-align:center;margin-bottom:20px;opacity:0;animation:riseIn 0.7s ease 0.3s forwards">
+        <div style="display:inline-flex;align-items:center;gap:7px;background:transparent;color:#993C1D;border:1.5px solid #993C1D;border-radius:30px;padding:8px 20px">
+          <svg width="11" height="11" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="5.5" stroke="#993C1D" stroke-width="1.5"/><line x1="8" y1="5" x2="8" y2="11" stroke="#993C1D" stroke-width="1.5" stroke-linecap="round"/><line x1="5" y1="8" x2="11" y2="8" stroke="#993C1D" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <span style="font-size:11px;font-weight:400;letter-spacing:0.06em;color:#993C1D">Select a root to step inside yourself, understand what your body is saying, and receive practices, plants and wisdom to guide you back.</span>
+        </div>
+      </div>
+
+      <div id="circle-container" style="position:relative;width:100%;max-width:520px;padding-top:28px"></div>
+      <p style="font-size:11px;font-weight:300;color:var(--ink-faint);margin-top:14px;letter-spacing:0.04em;font-style:italic;text-align:center">Begin with whatever draws you</p>
     </div>
   </section>
   <!-- Portals -->
@@ -343,14 +359,16 @@ footer { padding:52px 40px 44px; border-top:0.5px solid var(--border); display:f
   
 
   <footer>
-    <div class="footer-logo">Re-<em>Member</em></div>
-    <p class="footer-copy">A living relationship with yourself, deepened over time, taken together.</p>
+    <div class="footer-logo">In-<em>Sight</em></div>
+    <p class="footer-copy">A living relationship with yourself, deepened over time.</p>
   </footer>
 
 </div>
 </div>
 
 
+
+<div id="view-tracker" class="view"><div class="shell"><div id="tracker-content"></div></div></div>
 
 <div id="view-toolbox" class="view">
   <div class="shell">
@@ -428,7 +446,7 @@ footer { padding:52px 40px 44px; border-top:0.5px solid var(--border); display:f
             <div style="border-left:2px solid var(--spirit-color);padding:14px 18px"><p style="font-size:13px;font-weight:500;color:var(--ink);margin-bottom:6px">Relationship with the natural world</p><p style="font-size:13px;font-weight:300;color:var(--ink-soft);line-height:1.8">Called superstition, the old ways. Actually: thousands of years of accumulated observational knowledge about the relationship between women’s bodies, plants, seasons and lunar rhythms. Not replaced by better knowledge. Erased by a different kind of power.</p></div>
             <div style="border-left:2px solid var(--spirit-color);padding:14px 18px"><p style="font-size:13px;font-weight:500;color:var(--ink);margin-bottom:6px">The power of presence and witnessing</p><p style="font-size:13px;font-weight:300;color:var(--ink-soft);line-height:1.8">Called passivity. Actually: to witness without fixing, to hold without directing — this changes the neurological state of the person witnessed. Women have been doing this, unremarked and unvalued, since there have been people who needed to be held.</p></div>
           </div>
-          <p>Re-Member is built on the conviction that reclaiming these powers is not a return to the past. It is the most urgent and practical work of the present — for women’s health, for communities, and for a world running on a form of intelligence it can no longer afford to ignore.</p>
+          <p>In-Sight is built on the conviction that reclaiming these powers is not a return to the past. It is the most urgent and practical work of the present — for women’s health, for communities, and for a world running on a form of intelligence it can no longer afford to ignore.</p>
         </div>
       </div>
     </div>
@@ -779,7 +797,7 @@ window._wisdomMap={
   "meaning":   [{src:"Viktor Frankl",w:"Those who have a why to live can bear almost any how."},{src:"Women's experience",w:"I built a life that looked meaningful from the outside and felt hollow inside. Not from failure — from building someone else's vision of what my life should look like."},{src:"Purpose research",w:"People with a strong sense of purpose live measurably longer, with lower rates of cardiovascular disease and dementia. Meaning is not decoration. It is medicine."}],
   "beliefs":   [{src:"Ayurvedic tradition",w:"Samskaras — the deep impressions left by repeated thought — are like grooves in a riverbed. The water follows the groove automatically. The practice is not to fill the groove but to learn to see it."},{src:"Women's experience",w:"The belief that I had to earn rest. That worth came from output. I realised one day that I had been living by a rule I had never agreed to — that I had inherited from women who had inherited it before me. Seeing it was the beginning of being free of it."},{src:"Neuroplasticity research",w:"The brain does not distinguish between a repeated thought and a fact. Both carve the same pathways. The thought you think ten thousand times is the architecture you live inside."}],
   "community": [{src:"West African proverb",w:"If you want to go fast, go alone. If you want to go far, go together."},{src:"Women's experience",w:"I did not know how much I needed to be witnessed until I finally was. Not advised. Not fixed. Just seen. The nervous system does something specific when that happens — it releases what it has been holding on behalf of being alone."},{src:"Indigenous healing tradition",w:"The women's circle is not a social event. It is a governance structure. The wisdom held between women about health, community and transition is the intelligence the community runs on."}],
-  "inspiration":[{src:"Women's experience",w:"The joy I thought I had to earn turned out to be the one thing I most needed to restore everything else. A body that is finally allowed to enjoy itself heals differently."},{src:"Ayurvedic tradition",w:"Ojas — vital essence — is built not only through rest and nourishment but through joy, beauty and the experience of being genuinely alive. Pleasure is physiological. Its absence is a form of depletion."},{src:"Re-Member",w:"Joy is not the opposite of seriousness. It is the proof that the work is working."}]
+  "inspiration":[{src:"Women's experience",w:"The joy I thought I had to earn turned out to be the one thing I most needed to restore everything else. A body that is finally allowed to enjoy itself heals differently."},{src:"Ayurvedic tradition",w:"Ojas — vital essence — is built not only through rest and nourishment but through joy, beauty and the experience of being genuinely alive. Pleasure is physiological. Its absence is a form of depletion."},{src:"In-Sight",w:"Joy is not the opposite of seriousness. It is the proof that the work is working."}]
 }
 
 const ROOTS=[
@@ -1635,7 +1653,7 @@ var PRACTICES_DATA={
       "Who in your life might be willing to participate in something like this?",
       "What season of life or shared inquiry might bring the group together?",
       "What would you most want to be witnessed in right now?"
-    ],note:"Seed circles will be available in V2 of Re-Member. This practice guide is for building your own."}
+    ],note:"Seed circles will be available in V2 of In-Sight. This practice guide is for building your own."}
   ]
 },
 "pleasure-inventory":{
@@ -2295,6 +2313,78 @@ document.addEventListener("click",function(e){
 function goSystems(){buildSystemsList();showView("systems");}
 function goStages(){buildStagesList();showView("stages");}
 function goManifesto(){showView("manifesto");}
+function goTracker(){
+  var el=document.getElementById("tracker-content");
+  if(!el)return;
+  var h="";
+  h+="<div style=\"padding:48px 0 40px\">";
+  h+="<button class=\"back-btn\" onclick=\"goHome()\"><svg width='14' height='14' viewBox='0 0 16 16' fill='none'><path d='M10 3L5 8L10 13' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>Home</button>";
+  h+="<span class=\"eyebrow\">In-Sight</span>";
+  h+="<h2 class=\"section-title\">Tracker</h2>";
+  h+="<p class=\"section-intro\" style=\"margin-bottom:36px\">Your journey, witnessed by you.</p>";
+  h+="</div>";
+
+  // Coming soon hero
+  h+="<div style=\"background:var(--warm-white);border:0.5px solid var(--border);border-radius:var(--radius);padding:32px 28px;margin-bottom:20px;position:relative;overflow:hidden\">";
+  h+="<div style=\"position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(to bottom,#C17B6F,#7B7FAB,#6B8F71)\"></div>";
+  h+="<div style=\"padding-left:16px\">";
+  h+="<span class=\"root-badge\" style=\"background:#FEF4E6;color:#B08A5E;margin-bottom:20px;display:inline-block\">Coming in V2</span>";
+  h+="<h3 style=\"font-family:var(--serif);font-size:1.8rem;font-weight:300;color:var(--ink);line-height:1.3;margin-bottom:16px\">A blueprint of your own becoming.</h3>";
+  h+="<p style=\"font-size:14px;font-weight:300;color:var(--ink-soft);line-height:1.95;margin-bottom:16px\">The Tracker is where everything you discover across In-Sight comes together into a living picture of yourself. Not a performance dashboard. Not a habit app. Something quieter and more honest: a record of what you are noticing, what is shifting, what the body is saying, and what you are choosing to tend.</p>";
+  h+="<p style=\"font-size:14px;font-weight:300;color:var(--ink-soft);line-height:1.95;margin-bottom:16px\">From the roots you explore and the practices you return to, from the plants you save and the lunar phases that mark your moods \u2014 the Tracker weaves these threads into a personal blueprint. Not prescribed by anyone. Built entirely from your own engagement with the framework.</p>";
+  h+="<p style=\"font-family:var(--serif);font-size:15px;font-weight:300;font-style:italic;color:var(--ink);line-height:1.85\">What is offered here is the experience of witnessing yourself unfold \u2014 slowly, honestly, without performance. The Tracker holds that record so you don\u2019t have to hold it in your head.</p>";
+  h+="</div></div>";
+
+  // Three pillars
+  var pillars=[
+    {
+      color:"#C17B6F", bg:"#FAECE7",
+      title:"Your blueprint",
+      icon:"◎",
+      desc:"A personal map drawn from your own choices across the nine roots \u2014 which ones you return to, which practices land, which body systems you are tending. Over time, this becomes a portrait of your particular version of wholeness. Not a template. Yours."
+    },
+    {
+      color:"#7B7FAB", bg:"#EEEDFE",
+      title:"Your cycle & moon log",
+      icon:"◑",
+      desc:"Track your energy, mood, body sensations and inner climate across your cycle phases and lunar rhythm. Over months, patterns emerge \u2014 the kind that no test can reveal, because they live inside your particular experience. The body keeps the record. The Tracker helps you read it."
+    },
+    {
+      color:"#6B8F71", bg:"#EAF3EC",
+      title:"Your plant & practice archive",
+      icon:"◈",
+      desc:"Everything you save from the Plant Library, the roots and Grandmother\u2019s Wisdom is gathered here into a living archive. Not just a saved list \u2014 a growing relationship with the allies and practices that actually work for your particular body and season of life."
+    },
+    {
+      color:"#B08A5E", bg:"#FEF4E6",
+      title:"Your witness journal",
+      icon:"◉",
+      desc:"A private space to write. Not prompted by questions designed by someone else \u2014 just space to notice, record and reflect. Because the most important observations about your health are the ones you make yourself, in your own language, at the moment they become visible."
+    }
+  ];
+  h+="<div class=\"grid2\" style=\"gap:10px;margin-bottom:48px\">";
+  pillars.forEach(function(p){
+    h+="<div class=\"card-base\" style=\"border-top:2px solid "+p.color+"\">";
+    h+="<div style=\"display:flex;align-items:center;gap:10px;margin-bottom:12px\">";
+    h+="<span style=\"font-size:18px;color:"+p.color+"\">"+p.icon+"</span>";
+    h+="<p style=\"font-size:13px;font-weight:500;color:"+p.color+"\">"+p.title+"</p>";
+    h+="</div>";
+    h+="<p style=\"font-size:12px;font-weight:300;color:var(--ink-soft);line-height:1.75\">"+p.desc+"</p>";
+    h+="<p style=\"font-size:10px;font-weight:400;color:var(--ink-faint);margin-top:12px;letter-spacing:.06em\">Available in V2</p>";
+    h+="</div>";
+  });
+  h+="</div>";
+
+  // Closing note
+  h+="<div style=\"text-align:center;padding:32px 0 60px;border-top:0.5px solid var(--border)\">";
+  h+="<p style=\"font-family:var(--serif);font-size:1rem;font-style:italic;color:var(--ink-muted);line-height:1.85;max-width:440px;margin:0 auto\">In the meantime \u2014 your Toolbox already holds what you have saved. Begin collecting. The blueprint will find its form.</p>";
+  h+="<button onclick=\"goToolbox()\" style=\"margin-top:20px;font-family:var(--sans);font-size:10px;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:#FAF8F4;background:#1C1915;border:none;border-radius:2px;padding:11px 26px;cursor:pointer;transition:all 0.2s\" onmouseover=\"this.style.background='#C17B6F'\" onmouseout=\"this.style.background='#1C1915'\">Go to Toolbox \u2192</button>";
+  h+="</div>";
+
+  el.innerHTML=h;
+  showView("tracker");
+}
+
 function goToolbox(){buildToolbox();showView("toolbox");}
 
 function buildToolbox(){
@@ -2309,7 +2399,7 @@ function buildToolbox(){
   var h="";
   h+="<div style=\"padding:48px 0 24px\">";
   h+="<button class=\"back-btn\" onclick=\"goHome()\"><svg width='14' height='14' viewBox='0 0 16 16' fill='none'><path d='M10 3L5 8L10 13' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>Home</button>";
-  h+="<span class=\"eyebrow\">Re-Member</span>";
+  h+="<span class=\"eyebrow\">In-Sight</span>";
   h+="<h2 class=\"section-title\">Your Toolbox</h2>";
   h+="<p class=\"section-intro\">A living toolkit that grows with you. Save practices, plant allies and wisdom as you explore the roots.</p>";
   h+="</div>";
@@ -2570,7 +2660,7 @@ function buildCircle(){
     var nodeSz=(nr*2/W*100).toFixed(2)+"%";
     var node=document.createElement("div");
     node.style.cssText="position:absolute;left:"+pctX+";top:"+pctY+";transform:translate(-50%,-50%);width:"+nodeSz+";height:"+nodeSz+";border-radius:50%;background:"+dm.bg+";border:1.5px solid "+dm.color+"55;display:flex;flex-direction:column;align-items:center;justify-content:center;cursor:pointer;text-align:center;transition:all 0.22s ease;z-index:2;box-shadow:0 2px 8px "+dm.color+"18";
-    node.addEventListener("click",function(id){return function(){goRoot(id);};}(rootId));
+    node.addEventListener("click",function(id){return function(){goRoot(id,true);};}(rootId));
     node.addEventListener("mouseover",function(){this.style.transform="translate(-50%,-50%) scale(1.12)";this.style.boxShadow="0 4px 16px "+dm.color+"35";});
     node.addEventListener("mouseout",function(){this.style.transform="translate(-50%,-50%) scale(1)";this.style.boxShadow="0 2px 8px "+dm.color+"18";});
     var n1=document.createElement("p");
@@ -2597,7 +2687,8 @@ function buildStagesHome(){
   el.innerHTML=DURGAS.map(d=>`<div class="stage-pill" onclick="goStage('${d.id}')"><div class="stage-pip" style="background:${d.color}"></div><p class="stage-pill-name">${d.name}</p><p class="stage-pill-sub">${d.subtitle.split("—")[0].trim()}</p></div>`).join("");
 }
 
-function goRoot(id){currentRootTab="understanding";renderRoot(id);showView("root");}
+var _rootFromHome=false;
+function goRoot(id,fromHome){currentRootTab="understanding";_rootFromHome=!!fromHome;renderRoot(id);showView("root");}
 
 // Permission mapped to each root
 var ROOT_PERMISSIONS={
@@ -2823,9 +2914,13 @@ function renderRoot(id){
       +"<p style=\"font-family:var(--serif);font-size:15px;font-weight:300;font-style:italic;color:var(--ink);line-height:1.8\">"+perm+"</p>"
       +"</div>"
     : "";
+  var backHtml=_rootFromHome
+    ? "<button class=\"back-btn\" onclick=\"enterHome()\" style=\"margin-bottom:6px\"><svg width='14' height='14' viewBox='0 0 16 16' fill='none'><path d='M10 3L5 8L10 13' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>A feminine approach to being well</button>"
+      +"<button class=\"back-btn\" onclick=\"goHome()\" style=\"opacity:0.5;font-size:10px\"><svg width='11' height='11' viewBox='0 0 16 16' fill='none'><path d='M10 3L5 8L10 13' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>Home</button>"
+    : "<button class=\"back-btn\" onclick=\"goHome()\"><svg width='14' height='14' viewBox='0 0 16 16' fill='none'><path d='M10 3L5 8L10 13' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>Home</button>";
   _rc.innerHTML=
     "<div style=\"padding:48px 0 32px;border-bottom:0.5px solid var(--border);margin-bottom:0\">"
-    +"<button class=\"back-btn\" onclick=\"goHome()\"><svg width='14' height='14' viewBox='0 0 16 16' fill='none'><path d='M10 3L5 8L10 13' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>Home</button>"
+    +backHtml
     +"<span class=\"root-badge\" style=\"background:"+dm.bg+";color:"+dm.color+"\">"+dm.label+"</span>"
     +"<h2 class=\"root-title\">"+r.name+"</h2>"
     +"<p class=\"root-essence\">"+r.essence+"</p>"
@@ -3306,7 +3401,7 @@ function buildStagesList(tab){
 
   var header="<div style=\"padding:48px 0 24px\">"
     +"<button class=\"back-btn\" onclick=\"goHome()\"><svg width='14' height='14' viewBox='0 0 16 16' fill='none'><path d='M10 3L5 8L10 13' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>Home</button>"
-    +"<span class=\"eyebrow\">Re-Member</span>"
+    +"<span class=\"eyebrow\">In-Sight</span>"
     +"<h2 class=\"section-title\">Life stages, cycles<br>&amp; <em>rhythms.</em></h2>"
     +"<p class=\"section-intro\" style=\"margin:0 0 28px\">Three rhythms that map a woman's becoming — across a lifetime, a month, and a lunar cycle.</p>"
     +"</div>"
@@ -3480,7 +3575,8 @@ function renderPractice(from){
   var el=document.getElementById("practice-content");
   if(!el)return;
   if(practiceStep==="intro"){
-    el.innerHTML="<div class=\"practice-hero\"><span class=\"root-badge\" style=\"background:#EAF3EC;color:#0F6E56\">Practice</span><h2 class=\"root-title\">Cycle awareness map</h2></div>"
+    var backBtn=from?"<button class=\"back-btn\" style=\"margin-bottom:12px\" onclick=\"goRoot('"+from+"')\"><svg width='14' height='14' viewBox='0 0 16 16' fill='none'><path d='M10 3L5 8L10 13' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>Back to root</button>":"";
+    el.innerHTML="<div class=\"practice-hero\">"+backBtn+"<span class=\"root-badge\" style=\"background:#EAF3EC;color:#0F6E56\">Practice</span><h2 class=\"root-title\">Cycle awareness map</h2></div>"
       +"<div class=\"serif-pull\">Your body does not move in a straight line. It moves in a circle — and within that circle, four distinct seasons.</div>"
       +"<div class=\"intro-grid\">"
       +"<div class=\"intro-card\"><p class=\"intro-card-title\">The infradian rhythm</p><p class=\"intro-card-text\">A monthly biological cycle governing energy, cognition, mood, metabolism and immunity across roughly 28 days.</p></div>"
@@ -3618,6 +3714,7 @@ function renderGenericPractice(from,p){
   
   var h="";
   h+="<div class=\"practice-hero\">";
+  if(from){h+="<button class=\"back-btn\" style=\"margin-bottom:12px\" onclick=\"goRoot('"+from+"')\"><svg width=\'14\' height=\'14\' viewBox=\'0 0 16 16\' fill=\'none\'><path d=\'M10 3L5 8L10 13\' stroke=\'currentColor\' stroke-width=\'1.5\' stroke-linecap=\'round\' stroke-linejoin=\'round\'/>\' fill=\'none\'/></svg>Back to root</button>";}
   h+="<span class=\"root-badge\" style=\"background:"+dm.bg+";color:"+dm.text+"\">"+p.badge+"</span>";
   h+="<h2 class=\"root-title\">"+p.name+"</h2>";
   if(isFirst)h+="<div class=\"serif-pull\">"+p.pull+"</div>";
@@ -3746,9 +3843,9 @@ function goPlantLibrary(section){
   var h="";
   h+="<div style=\"padding:48px 0 32px\">";
   h+="<button class=\"back-btn\" onclick=\"goHome()\"><svg width='14' height='14' viewBox='0 0 16 16' fill='none'><path d='M10 3L5 8L10 13' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>Home</button>";
-  h+="<span class=\"eyebrow\">Re-Member</span>";
+  h+="<span class=\"eyebrow\">In-Sight</span>";
   h+="<h2 class=\"section-title\">Plant Library</h2>";
-  h+="<p class=\"section-intro\" style=\"margin-bottom:28px\">Plants are not supplements. They are allies \u2014 beings with their own intelligence, carrying thousands of years of accumulated knowing from healers, elders and traditions across every culture.</p>";
+  h+="<p class=\"section-intro\" style=\"margin-bottom:28px\">Plants are not supplements. They are allies \u2014 sharing thousands of years of accumulated knowing with healers, elders and traditions across every culture.</p>";
 
   // If no section selected, show 4 entry cards
   if(!section){
@@ -4124,7 +4221,7 @@ function goCommunity(section){
   var h="";
   h+="<div style=\"padding:48px 0 32px\">";
   h+="<button class=\"back-btn\" onclick=\"goHome()\"><svg width='14' height='14' viewBox='0 0 16 16' fill='none'><path d='M10 3L5 8L10 13' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>Home</button>";
-  h+="<span class=\"eyebrow\">Re-Member</span>";
+  h+="<span class=\"eyebrow\">In-Sight</span>";
   h+="<h2 class=\"section-title\">Connection &amp; belonging</h2>";
   h+="<p class=\"section-intro\" style=\"margin-bottom:28px\">A space to be witnessed, supported and heard \u2014 not as patients or clients, but as whole people navigating real lives. What is being built here is infrastructure for genuine feminine community: witnessed, rooted, intergenerational and alive.</p>";
 
